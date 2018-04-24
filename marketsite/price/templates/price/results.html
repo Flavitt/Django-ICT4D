@@ -1,0 +1,9 @@
+<h1>{{ crop.crop_text }}</h1>
+
+<ul>
+{% for choice in crop.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'price:detail' crop.id %}">Vote again?</a>

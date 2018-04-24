@@ -1,0 +1,9 @@
+{% if latest_crop_list %}
+    <ul>
+    {% for crop in latest_crop_list %}
+        <li><a href="/price/{{ crop.id }}/">{{ crop.crop_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No prices are available.</p>
+{% endif %}

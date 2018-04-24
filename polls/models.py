@@ -22,3 +22,12 @@ class Choice(models.Model):
 	votes = models.IntegerField(default=0)
 	def __str__(self):
 		return self.choice_text
+
+
+class Crop(models.Model):
+	name = models.CharField(max_length=200)
+	price = models.FloatField(default=0)	
+	time = models.DateTimeField('timestamp')
+	def __str__(self):
+		return self.name
+
